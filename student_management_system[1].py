@@ -1,24 +1,3 @@
-"""
-2. Student Management System (OOP + File Handling)
-Create class Student:
-
-Features:
-
-Add student
-
-Save student to file
-
-Read all students from file
-
-Calculate average marks
-
-Use:
-
-JSON or text file
-
-Exception handling
-"""
-
 print("====== Student Management System ======")
 
 class Student:
@@ -69,4 +48,5 @@ if __name__ == "__main__":
     students = Student.read_students()
     avg_marks = Student.calculate_average(students)
     print(f"Average Marks: {avg_marks:.2f}")
+
     
