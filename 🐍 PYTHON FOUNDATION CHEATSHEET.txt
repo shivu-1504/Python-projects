@@ -1,0 +1,211 @@
+🐍 PYTHON FOUNDATION CHEATSHEET
+1️⃣ Basic Syntax
+print("Hello World")
+
+Python uses indentation instead of {}.
+
+2️⃣ Variables & Data Types
+x = 10          # int
+y = 10.5        # float
+name = "Shiv"   # string
+is_active = True  # boolean
+Type checking
+type(x)
+
+3️⃣ Type Conversion
+int("10")
+float("10.5")
+str(100)
+
+4️⃣ Taking Input
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+
+5️⃣ Operators
+Arithmetic
+
++ - * / // % **
+
+Comparison
+
+== != > < >= <=
+
+Logical
+
+and or not
+
+6️⃣ Conditional Statements
+if age > 18:
+    print("Adult")
+elif age == 18:
+    print("Just adult")
+else:
+    print("Minor")
+7️⃣ Loops
+For loop
+for i in range(5):
+    print(i)
+While loop
+while x > 0:
+    print(x)
+    x -= 1
+
+
+8️⃣ Strings
+name = "Shiv"
+
+name.upper()
+name.lower()
+name.strip()
+name.replace("S", "R")
+len(name)
+String slicing
+name[0:2]
+name[::-1]  # reverse
+
+
+9️⃣ Lists
+numbers = [1, 2, 3]
+numbers.append(4)
+numbers.remove(2)
+numbers.pop()
+numbers.sort()
+len(numbers)
+Loop list
+for n in numbers:
+    print(n)
+List comprehension
+squares = [x*x for x in range(5)]
+
+
+🔟 Tuples
+t = (1, 2, 3)
+
+Immutable (cannot modify).
+
+
+1️⃣1️⃣ Sets
+s = {1, 2, 3}
+s.add(4)
+
+No duplicates allowed.
+
+
+1️⃣2️⃣ Dictionaries
+student = {
+    "name": "Shiv",
+    "marks": 90
+}
+
+student["name"]
+student["age"] = 21
+student.keys()
+student.values()
+
+Loop dictionary:
+
+for key, value in student.items():
+    print(key, value)
+
+
+1️⃣3️⃣ Functions
+def greet(name):
+    return "Hello " + name
+
+greet("Shiv")
+Default argument
+def add(a, b=5):
+    return a + b
+Lambda function
+square = lambda x: x*x
+
+
+1️⃣4️⃣ Scope
+
+Local vs Global variables.
+
+
+1️⃣5️⃣ OOP Basics
+Class
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello", self.name)
+
+p1 = Person("Shiv")
+p1.greet()
+
+
+1️⃣6️⃣ Inheritance
+class Animal:
+    def speak(self):
+        print("Sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Bark")
+
+
+1️⃣7️⃣ Encapsulation
+class Bank:
+    def __init__(self):
+        self.__balance = 1000
+
+Private variable → __balance
+
+
+1️⃣8️⃣ @staticmethod
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+    
+
+1️⃣9️⃣ File Handling
+Write
+with open("file.txt", "w") as f:
+    f.write("Hello")
+Append
+with open("file.txt", "a") as f:
+    f.write("World")
+Read
+with open("file.txt", "r") as f:
+    content = f.read()
+Read line by line
+for line in f:
+    print(line)
+
+2️⃣0️⃣ CSV Handling
+import csv
+
+with open("data.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Marks"])
+
+
+2️⃣1️⃣ Exception Handling
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except Exception as e:
+    print("Error:", e)
+else:
+    print("No error")
+finally:
+    print("Done")
+
+
+2️⃣2️⃣ Common Errors
+
+TypeError
+
+ValueError
+
+IndexError
+
+KeyError
+
+FileNotFoundError
